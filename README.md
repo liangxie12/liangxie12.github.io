@@ -1,2 +1,1 @@
-theme: jekyll-theme-minimal
-title: liangxie12's homepage
+liangxie12's Homepage
