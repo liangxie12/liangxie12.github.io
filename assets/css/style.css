@@ -290,9 +290,6 @@ article.active {
 }
 
 
-
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -302,9 +299,6 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -470,16 +464,16 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.introduction .article-title { margin-bottom: 15px; }
+.about .article-title { margin-bottom: 15px; }
 
-.introduction-text {
+.about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-.introduction-text p { margin-bottom: 15px; }
+.about-text p { margin-bottom: 15px; }
 
 
 /*-----------------------------------*\
@@ -975,12 +969,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #INTRODUCTION
+   * #ABOUT
    */
 
-  .introduction .article-title { margin-bottom: 20px; }
+  .about .article-title { margin-bottom: 20px; }
 
-  .introduction-text { margin-bottom: 40px; }
+  .about-text { margin-bottom: 40px; }
 
 
   /**
