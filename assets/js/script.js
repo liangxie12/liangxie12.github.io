@@ -69,28 +69,25 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
+// contact form submission
+const form = document.getElementById('sheetdb-form');
 
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+  if (form.elements.website.value !== "") {
+    return;
+  }
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
+  fetch(form.action, { method: 'POST', body: new FormData(form) })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Request failed with status ' + response.status);
+      }
+      form.reset();
+    })
+    .catch((error) => console.error(error));
+});
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");

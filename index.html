@@ -703,17 +703,25 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form id="sheetdb-form" action="https://sheetdb.io/api/v1/hciy5rg1y5h6o" method="POST">
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="text" name="data[name]" class="form-input" placeholder="Full name" class="form-input">
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <div class="input-wrapper">
+              <input type="email" name="data[email]" class="form-input" placeholder="Email address">
+              <input type="tel" name="data[phone]" class="form-input" placeholder="Phone">
+            </div>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <textarea name="data[message]" class="form-input" placeholder="Your Message"></textarea>
+            <input type="hidden" name="data[id]" value="INCREMENT">
+            <input type="hidden" name="data[created_at]" value="DATETIME">
+            <input type="hidden" name="data[source]" value="landing-page-a">
+
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position: absolute; left: -9999px" aria-hidden="ture">
+
+            <button class="form-btn" type="submit">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
